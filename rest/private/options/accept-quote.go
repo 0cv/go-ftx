@@ -6,7 +6,7 @@ import (
 )
 
 type RequestForAcceptOpQuote struct {
-	QuoteID int
+	QuoteID int64
 }
 
 type ResponseForAcceptOpQuote Quote

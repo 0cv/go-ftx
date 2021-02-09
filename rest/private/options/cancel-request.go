@@ -7,7 +7,7 @@ import (
 )
 
 type RequestForCancelOpQuoteRequest struct {
-	RequestID int
+	RequestID int64
 }
 
 type ResponseForCancelOpQuoteRequest struct {
