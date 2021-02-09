@@ -8,7 +8,7 @@ import (
 )
 
 type RequestForOpFills struct {
-	Limit int   `url:"limit,omitempty"`
+	Limit int64 `url:"limit,omitempty"`
 	Start int64 `url:"start_time,omitempty"`
 	End   int64 `url:"end_time,omitempty"`
 }
@@ -16,7 +16,7 @@ type RequestForOpFills struct {
 type ResponseForOpFills []OpTrade
 
 type OpFill struct {
-	ID        int       `json:"id"`
+	ID        int64     `json:"id"`
 	Liquidity string    `json:"liquidity"`
 	Side      string    `json:"side"`
 	Price     float64   `json:"price"`

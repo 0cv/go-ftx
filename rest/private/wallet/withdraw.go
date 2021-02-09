@@ -11,7 +11,7 @@ type RequestForWithdraw struct {
 	// Optionals
 	Tag      string `url:"tag,omitempty"`
 	Password string `url:"password,omitempty"`
-	Code     int    `url:"code,omitempty"`
+	Code     int64  `url:"code,omitempty"`
 }
 
 type ResponseForWithdraw Withdraw

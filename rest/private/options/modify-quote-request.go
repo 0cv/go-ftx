@@ -7,7 +7,7 @@ import (
 
 // Document記載はCreate quoteだが、modify request
 type RequestForModifyOpQuoteRequest struct {
-	RequestID int     `json:"-"`
+	RequestID int64   `json:"-"`
 	Price     float64 `json:"price"`
 }
 

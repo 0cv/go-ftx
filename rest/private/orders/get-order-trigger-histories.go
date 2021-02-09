@@ -35,10 +35,10 @@ type TriggerHistory struct {
 	TrailStart   float64 `json:"trailStart"`
 	TrailValue   float64 `json:"trailValue"`
 
-	ID               int       `json:"id"`
-	OrderID          int       `json:"orderId"`
-	Size             int       `json:"size"`
-	FilledSize       int       `json:"filledSize"`
+	ID               int64     `json:"id"`
+	OrderID          int64     `json:"orderId"`
+	Size             int64     `json:"size"`
+	FilledSize       int64     `json:"filledSize"`
 	RetryUntilFilled bool      `json:"retryUntilFilled"`
 	ReduceOnly       bool      `json:"reduceOnly"`
 	TriggeredAt      time.Time `json:"triggeredAt"`
