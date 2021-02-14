@@ -5,6 +5,7 @@ import (
 )
 
 type RequestForPositions struct {
+	ShowAvgPrice bool `json:"showAvgPrice"`
 }
 
 type ResponseForPositions []Position
