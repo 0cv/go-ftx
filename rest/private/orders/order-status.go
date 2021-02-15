@@ -8,7 +8,7 @@ import (
 
 type RequestForOrderStatus struct {
 	ClientID string
-	OrderID  int64
+	OrderID  string
 }
 
 type ResponseForOrderStatus struct {
