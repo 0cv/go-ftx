@@ -276,7 +276,7 @@ func ConnectForPrivate(ctx context.Context, ch chan Response, key, secret string
 			if err != nil {
 				l.Printf("[ERROR]: msg error: %+v", err)
 				res.Type = ERROR
-				res.Results = fmt.Errorf("%v", err)
+				res.Results = fmt.Errorf("msg error: %v", err.Error())
 				ch <- res
 				break RESTART
 			}
@@ -285,7 +285,7 @@ func ConnectForPrivate(ctx context.Context, ch chan Response, key, secret string
 			if typeMsg == "error" {
 				l.Printf("[ERROR]: error: %+v", string(msg))
 				res.Type = ERROR
-				res.Results = fmt.Errorf("%v", string(msg))
+				res.Results = fmt.Errorf("error %v", string(msg))
 				ch <- res
 				break RESTART
 			}
@@ -294,7 +294,7 @@ func ConnectForPrivate(ctx context.Context, ch chan Response, key, secret string
 			if err != nil {
 				l.Printf("[ERROR]: channel error: %+v", string(msg))
 				res.Type = ERROR
-				res.Results = fmt.Errorf("%v", string(msg))
+				res.Results = fmt.Errorf("channel error%v", string(msg))
 				ch <- res
 				break RESTART
 			}
